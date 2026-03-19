@@ -1,6 +1,33 @@
-<section class="mx-auto max-w-4xl px-6 py-10 text-[var(--c-text-primary)]">
-	<article
-		class="landing-prose prose prose-lg max-w-none rounded-[var(--radius-card)] bg-[var(--c-bg-tertiary)] p-6 shadow-[var(--shadow-sm)] prose-li:marker:text-[var(--c-primary)] sm:p-8"
-		[innerHTML]="html()"
-	></article>
+<section class="landing-page">
+	<div class="landing-shell">
+		<header class="hero">
+			<p class="eyebrow">Zerno Menu</p>
+			<h1>Напої в Zerno</h1>
+			<p class="hero-copy">
+				Добірка позицій з вашого меню: класична кава, авторські напої, лимонади та
+				холодні коктейлі.
+			</p>
+		</header>
+
+		<div class="menu-grid">
+			@for (section of menuSections; track section.title) {
+				<section class="menu-card" [attr.aria-label]="section.title">
+					<header class="menu-card__header">
+						<p class="menu-card__eyebrow">Drink</p>
+						<h2>{{ section.title }}</h2>
+						<p>{{ section.description }}</p>
+					</header>
+
+					<div class="menu-list">
+						@for (item of section.items; track item.name) {
+							<div class="menu-item">
+								<p class="menu-item__name">{{ item.name }}</p>
+								<p class="menu-item__price">{{ item.price }}</p>
+							</div>
+						}
+					</div>
+				</section>
+			}
+		</div>
+	</div>
 </section>
