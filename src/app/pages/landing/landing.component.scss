@@ -1,0 +1,60 @@
+:host {
+	display: block;
+	background: var(--c-bg-primary);
+	color: var(--c-text-primary);
+}
+
+.landing-prose {
+	--tw-prose-body: var(--c-text-primary);
+	--tw-prose-headings: var(--c-text-secondary);
+	--tw-prose-lead: var(--c-text-primary);
+	--tw-prose-links: var(--c-primary);
+	--tw-prose-bold: var(--c-text-secondary);
+	--tw-prose-counters: var(--c-text-muted);
+	--tw-prose-bullets: var(--c-primary);
+	--tw-prose-hr: var(--c-border);
+	--tw-prose-quotes: var(--c-text-secondary);
+	--tw-prose-quote-borders: var(--c-border);
+	--tw-prose-captions: var(--c-text-muted);
+	--tw-prose-kbd: var(--c-text-secondary);
+	--tw-prose-kbd-shadows: 0 0 0;
+	--tw-prose-code: var(--c-text-secondary);
+	--tw-prose-pre-code: var(--c-text-secondary);
+	--tw-prose-pre-bg: var(--c-bg-secondary);
+	--tw-prose-th-borders: var(--c-border);
+	--tw-prose-td-borders: var(--c-border);
+	color: var(--c-text-primary);
+}
+
+.landing-prose :where(h1, h2, h3, h4, h5, h6, strong, code, th) {
+	color: var(--c-text-secondary);
+}
+
+.landing-prose :where(a) {
+	color: var(--c-primary);
+}
+
+.landing-prose :where(a:hover) {
+	color: var(--c-primary-hover);
+}
+
+.landing-prose :where(hr, thead, tbody tr, blockquote) {
+	border-color: var(--c-border);
+}
+
+.landing-prose :where(blockquote) {
+	color: var(--c-text-muted);
+}
+
+.landing-prose :where(code):not(:where(pre code)) {
+	background: var(--c-bg-secondary);
+	border-radius: var(--radius);
+	padding: 0.125rem 0.375rem;
+}
+
+.landing-prose :where(pre) {
+	background: var(--c-bg-secondary);
+	border: 1px solid var(--c-border);
+	border-radius: var(--radius-card);
+	box-shadow: var(--shadow-sm);
+}
